@@ -1,0 +1,191 @@
+:root {
+  --color-primary-orange: hsl(26, 100%, 55%);
+  --color-primary-pale-orange: hsl(25, 100%, 94%);
+
+  --color-neutral-very-dark-blue: hsl(220, 13%, 13%);
+  --color-neutral-dark-grayish-blue: hsl(219, 9%, 45%);
+  --color-neutral-grayish-blue: hsl(220, 14%, 75%);
+  --color-neutral-light-grayish-blue: hsl(223, 64%, 98%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-black-75: hsla(0, 0%, 0%, 0.75);
+
+  --font-primary: 'Kumbh Sans', sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --font-size-small: 1rem;
+  --font-size-medium: 1.25rem;
+  --font-size-large: 1.5rem;
+  --font-size-extra-large: 1.75rem;
+  --font-size-xxl: 2rem;
+  --font-size-xxxl: 2.5rem;
+  --font-size-max: 3rem;
+
+  --font-size-body: var(--font-size-small);
+}
+
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role,
+ which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* utilities */
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+.container {
+  width: min(70rem, 90%);
+  margin-inline: auto;
+}
+
+.flex-group {
+  display: flex;
+  gap: 3.5rem;
+}
+
+.even-columns {
+  display: grid;
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    gap: var(--grid-gap, 8em);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+
+  .container-inline-padding {
+    padding-inline: 4%;
+  }
+
+  .center {
+    display: grid;
+    place-items: center;
+  }
+}
+
+.grid-flow {
+  display: grid;
+  gap: var(--content-spacing, 2em);
+}
+
+/* general styling */
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body);
+  color: var(--color-neutral-dark-grayish-blue);
+}
+
+
+/* navigation */
+.primary-header {
+  margin-block-end: 4rem;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-block: 2rem;
+  box-shadow: 0px .5px 0px 0px var(--color-neutral-grayish-blue);
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--color-neutral-dark-grayish-blue);
+}
+.mobile-nav-toggle {
+  display: none;
+}
+
+.mobile-nav-toggle,
+.cart-button {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+.cart-button img {
+  width: 1.5rem;
+}
+
+.avatar {
+  width: 3rem;
+}
+
+.cart-modal {
+  display: none;
+}
+
+.product-listbox {
+  display: none;
+}
+
+
+
+
+
+
+

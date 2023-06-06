@@ -5,18 +5,17 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor | E-commerce Product Page - Fall Limited Edition Sneakers</title>
-    <link rel="stylesheet" href="style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     <header class="primary-header">
-      <div class="container header-wrapper">
-        <div class="flex-group">
-          <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+      <div class="header-wrapper">
+        <div class="header-group">
+          <button class="mobile-nav-toggle button" aria-controls="primary-navigation" aria-expanded="false">
             <span class="visually-hidden">Menu</span>
           </button>
           <a class="logo" href="#">
@@ -32,9 +31,9 @@
             </ul>
           </nav>
         </div>
-        <div class="flex-group">
-          <button class="cart-button">
-            <span class="visually-hidden">Cart</span>
+        <div class="header-group">
+          <button class="cart-button button">
+            <span class="visually-hidden">Cart</span> 
             <img src="images/icon-cart.svg" alt="">
             <span class="cart-quantity-indicator"></span>
           </button>
@@ -48,57 +47,67 @@
         <div class="cart-content">
           <p class="cart-empty-message">Your cart is empty.</p>
           <div class="cart-item">
-            <img src="" alt="">
+            <img src="images/image-product-1-thumbnail.jpg" alt="">
             <div class="cart-item-info">
               <p class="cart-item-name">Fall Limited Edition Sneakers</p>
-              <p class="cart-item-price">
-                <span class="visually-hidden">Unit price:</span>$125.00 &times; 2
-              </p>
-              <p class="cart-item-total-price">
-                <span class="visually-hidden">Total price:</span> $250.00
-              </p>
+              <div class="flex">
+                <p class="cart-item-price">
+                  <span class="visually-hidden">Unit price:</span>$125.00 &times; 2
+                </p>
+                <p class="cart-item-total-price">
+                  <span class="visually-hidden">Total price:</span> $250.00
+                </p>
+              </div>
             </div>
-            <button class="cart-item-delete-button">
+            <button class="cart-item-delete-button button">
               <span class="visually-hidden">Delete cart item</span>
               <img src="images/icon-delete.svg" alt="">
             </button>
           </div>
-          <a class="cart-checkout-button" href="#">Checkout</a>
+          <a class="cart-checkout-button button" href="#">Checkout</a>
         </div>
       </section>
     </header>
     <main>
-      <div class="container product-wrapper">
-        <section class="product-image-gallery">
-          <div class="product-image-preview">
+      <div class="product-wrapper">
+        <section class="product-gallery">
+          <div class="product-image-display">
             <img src="images/image-product-1.jpg" alt="">
-            <button class="previous-button">
+            <button class="previous-button button">
               <span class="visually-hidden">Previous slide</span>
               <img src="images/icon-previous.svg" alt="">
             </button>
-            <button class="next-button">
+            <button class="next-button button">
               <span class="visually-hidden">Next slide</span>
               <img src="images/icon-next.svg" alt="">
             </button>
           </div>
           <div class="product-thumbnails">
-            <img src="images/image-product-1-thumbnail.jpg" alt="">
-            <img src="images/image-product-2-thumbnail.jpg" alt="">
-            <img src="images/image-product-3-thumbnail.jpg" alt="">
-            <img src="images/image-product-4-thumbnail.jpg" alt="">
+            <div class="selected">
+              <img class="active" src="images/image-product-1-thumbnail.jpg" alt="">
+            </div>
+            <div>
+              <img src="images/image-product-2-thumbnail.jpg" alt="">
+            </div>
+            <div>
+              <img src="images/image-product-3-thumbnail.jpg" alt="">
+            </div>
+            <div>
+              <img src="images/image-product-4-thumbnail.jpg" alt="">
+            </div>
           </div>
         </section>
         <section class="product-content">
-          <p class="product-brand">Sneaker Company</p>
-          <h1 class="product-title">Fall Limited Edition Sneakers</h1>
-          <p class="product-description">
+          <p class="product-brand">SNEAKER COMPANY</p>
+          <h1 class="margin-bottom">Fall Limited Edition Sneakers</h1>
+          <p class="product-description margin-bottom">
             These low-profile sneakers are your perfect casual wear companion.
             Featuring a durable rubber outer sole, they’ll withstand everything
             the weather can offer.
           </p>
-          <div class="price-details">
-            <div>
-              <p class="product-price">
+          <div class="product-price-detail margin-bottom">
+            <div class="product-price-with-discount">
+              <p class="product-discounted-price">
                 <span class="visually-hidden">Current price:</span>$125.00
               </p>
               <p class="product-discount">
@@ -106,52 +115,56 @@
               </p>
             </div>
             <p class="product-original-price">
-              <span class="visually-hidden">Original price:</span>$250.00
+              <span class="visually-hidden">Original price:</span>
+              <s>$250.00</s>
             </p>
           </div>
-          <div class="product-quantity-container">
+          <div class="product-cart-controls">
             <div class="product-quantity-controls">
-              <button class="reduce-quantity-button">
+              <button class="reduce-quantity-button button">
                 <span class="visually-hidden">Reduce quantity</span>
                 <img src="images/icon-minus.svg" alt="">
               </button>
               <p class="product-quantity-number">
                 <span class="visually-hidden">Product quantity:</span> 0
               </p>
-              <button class="increase-quantity-button">
+              <button class="increase-quantity-button button">
                 <span class="visually-hidden">Increase quantity</span>
                 <img src="images/icon-plus.svg" alt="">
               </button>
             </div>
-            <button class="add-to-cart-button">Add to cart</button>
+            <button class="add-to-cart-button button">
+              <img src="images/icon-cart-white.svg" alt="">
+              <span>Add to cart</span> 
+            </button>
+          </div>
+        </section>
+        <section class="product-lightbox">
+          <div class="lightbox-content">
+            <button class="close-button">
+              <span class="visually-hidden">close</span>
+              <img src="images/icon-close.svg" alt="">
+            </button>
+            <div class="product-image-preview">
+              <img src="images/image-product-1.jpg" alt="">
+              <button class="previous-button">
+                <span class="visually-hidden">Previous slide</span>
+                <img src="images/icon-previous.svg" alt="">
+              </button>
+              <button class="next-button">
+                <span class="visually-hidden">Next slide</span>
+                <img src="images/icon-next.svg" alt="">
+              </button>
+            </div>
+          </div>
+          <div class="product-thumbnails even-columns horizontal-padding">
+            <img src="images/image-product-1-thumbnail.jpg" alt="">
+            <img src="images/image-product-2-thumbnail.jpg" alt="">
+            <img src="images/image-product-3-thumbnail.jpg" alt="">
+            <img src="images/image-product-4-thumbnail.jpg" alt="">
           </div>
         </section>
       </div>
-      <section class="product-lightbox">
-        <div class="lightbox-content">
-          <button class="close-button">
-            <span class="visually-hidden">close</span>
-            <img src="images/icon-close.svg" alt="">
-          </button>
-          <div class="lightbox-image-preview">
-            <img src="images/image-product-1.jpg" alt="">
-            <button class="lightbox-previous-button">
-              <span class="visually-hidden">Previous slide</span>
-              <img src="images/icon-previous.svg" alt="">
-            </button>
-            <button class="lightbox-next-button">
-              <span class="visually-hidden">Next slide</span>
-              <img src="images/icon-next.svg" alt="">
-            </button>
-          </div>
-        </div>
-        <div class="product-thumbnails-lightbox">
-          <img src="images/image-product-1-thumbnail.jpg" alt="">
-          <img src="images/image-product-2-thumbnail.jpg" alt="">
-          <img src="images/image-product-3-thumbnail.jpg" alt="">
-          <img src="images/image-product-4-thumbnail.jpg" alt="">
-        </div>
-      </section>
     </main>
     <script type="module" src="/main.js"></script>
   </body>
